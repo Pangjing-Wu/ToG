@@ -33,9 +33,9 @@ def replace_entities_prefix(entities):
 
 
 def id2entity_name_or_type(entity_id):
-    sparql = sparql_id % (entity_id, entity_id)
+    entity_id = sparql_id % (entity_id, entity_id)
     sparql = SPARQLWrapper(SPARQLPATH)
-    sparql.setQuery(sparql)
+    sparql.setQuery(entity_id)
     sparql.setReturnFormat(JSON)
     results = sparql.query().convert()
     if len(results["results"]["bindings"])==0:

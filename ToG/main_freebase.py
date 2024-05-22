@@ -85,7 +85,7 @@ if __name__ == '__main__':
                     flag_printed = True
                 else:
                     print("depth %d still not find the answer." % depth)
-                    topic_entity = {entity: id2entity_name_or_type[entity] for entity in entities_id}
+                    topic_entity = {entity: id2entity_name_or_type(entity) for entity in entities_id}
                     continue
             else:
                 half_stop(question, cluster_chain_of_entities, args)

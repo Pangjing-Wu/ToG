@@ -152,7 +152,7 @@ def relation_search_prune(entity_id, entity_name, pre_relations, pre_head, quest
     
 
     if len(pre_relations) != 0 and pre_head !=-1:
-        tail_relations = [rel for rel in tail_relations if not pre head or rel not in pre_relations]
+        tail_relations = [rel for rel in tail_relations if not pre_head or rel not in pre_relations]
         head_relations = [rel for rel in head_relations if pre_head or rel not in pre_relations]
 
     head_relations = list(set(head_relations))
